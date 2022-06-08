@@ -26,6 +26,7 @@ const Register = () => {
     result = await result.json();
     console.log("result:", result);
 
+
     localStorage.setItem("user", JSON.stringify(result));
 
     alert("Signup successfully");

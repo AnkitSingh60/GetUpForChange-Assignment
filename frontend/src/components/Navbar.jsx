@@ -18,7 +18,11 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-
+          {auth ? (<li className="nav-item">
+            {<span className="headernameSpan nav-link">
+          {JSON.parse(auth).name.toUpperCase()}
+        </span>}
+        </li>) : ""}
           {auth ? (
             ""
           ) : (

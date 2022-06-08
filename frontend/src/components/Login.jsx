@@ -24,7 +24,7 @@ const Login = () => {
       result.Message ===
       "Either the email or the password you entered is not correct"
       ) {
-          alert("Email or Password is invalid!");
+          alert("Invalid login!");
           
         } else {
             alert("Logged in successfully");

@@ -16,6 +16,7 @@ app.use(cors());
 app.post("/register",register)
 app.post("/login",login)
 
+
 app.listen(PORT, async () => {
     try {
         await connect()
