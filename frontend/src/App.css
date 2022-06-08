@@ -1,38 +1,74 @@
-.App {
+* {
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.box1 {
+  border: 1px solid rgb(209, 206, 206);
+  width: 370px;
+  height: 330px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.box2 {
+  border: 1px solid rgb(209, 206, 206);
+  width: 370px;
+  height: 520px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.h2Heading {
   text-align: center;
+  margin-top: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+  margin-left: 30px;
+  font-size: 12px;
+  font-weight: 450;
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  border-color: 1px solid rgb(209, 206, 206);
+  margin-left: 30px;
+  height: 40px;
+  width: 235px;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.passTC {
+  font-size: 12px;
+  margin-left: 180px;
+}
+
+.loginForm {
+  margin-top: 20px;
+}
+.Loginbutton {
+  margin-left: 110px;
+  margin-top: 10px;
+  background-color: rgb(57, 136, 255);
+  border: none;
+  height: 40px;
+  width: 120px;
   color: white;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.inputbox {
+  width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logout {
+  margin-right: 30px;
+}
+::placeholder {
+  font-size: 13px;
 }
