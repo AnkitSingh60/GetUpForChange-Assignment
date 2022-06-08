@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#environment
+.env
+
 
 # testing
 /coverage
@@ -14,7 +17,6 @@
 /frontend/build
 
 # misc
-.env
 .DS_Store
 .env.local
 .env.development.local
