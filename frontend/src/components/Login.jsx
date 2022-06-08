@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Login = () => {
@@ -23,27 +23,26 @@ const Login = () => {
     if (
       result.Message ===
       "Either the email or the password you entered is not correct"
-    ) {
-      alert("Email or Password is invalid!");
-    } else {
-      alert("Logged in successfully");
-      navigate("/");
+      ) {
+          alert("Email or Password is invalid!");
+          
+        } else {
+            alert("Logged in successfully");
+            navigate("/");
     }
     localStorage.setItem("user", JSON.stringify(result));
   };
 
-
   return (
     <>
       <Navbar />
-
       <div className="mainContainer">
         <div className="box1">
           <h4 className="h2Heading">Login</h4>
           <div className="loginForm">
             <form onSubmit={submitHandler}>
               <div className="form-group col-md-3">
-                <label for="inputEmail4">Email</label>
+                <label>Email</label>
                 <input
                   type="email"
                   value={email}
@@ -63,7 +62,6 @@ const Login = () => {
                   placeholder="Enter your password"
                 />
               </div>
-              
 
               <button className="Loginbutton" type="submit">
                 Login
@@ -72,7 +70,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };

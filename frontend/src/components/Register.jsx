@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Register = () => {
@@ -22,6 +22,7 @@ const Register = () => {
         "Content-type": "application/json",
       },
     });
+
     result = await result.json();
     console.log("result:", result);
 
@@ -50,7 +51,7 @@ const Register = () => {
                   className=" inputbox form-control"
                   placeholder="Enter your name"
                 />
-                <label for="inputEmail4">Email</label>
+                <label>Email</label>
                 <input
                   type="email"
                   value={email}
@@ -60,7 +61,7 @@ const Register = () => {
                 />
               </div>
               <div className="form-group col-md-3">
-                <label for="inputEmail4">Phone</label>
+                <label>Phone</label>
                 <input
                   type="number"
                   value={phone}
@@ -71,7 +72,7 @@ const Register = () => {
               </div>
 
               <div className="form-group col-md-3">
-                <label for="inputEmail4">Password</label>
+                <label>Password</label>
                 <input
                   type="password"
                   value={password}
@@ -79,7 +80,7 @@ const Register = () => {
                   className=" inputbox form-control"
                   placeholder="Enter your password"
                 />
-                <label for="inputEmail4">Confirm Password</label>
+                <label>Confirm Password</label>
                 <input
                   type="password"
                   value={confirmPassword}
