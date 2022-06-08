@@ -1,12 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const auth = localStorage.getItem("user");
 
   const logout = () => {
     localStorage.removeItem("user");
     window.location.href = "/";
+  };
+
+  const Clear = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
   };
 
   return (
@@ -42,10 +48,17 @@ const Navbar = () => {
         </ul>
       </div>
       {auth ? (<li className="nav-item">
-        <Link onClick={logout} className="nav-link logout" to="/">
+        <button onClick={logout} className="nav-link logout">
           Logout
-        </Link>
-      </li>) : ""}
+        </button>
+      </li>) : (
+        <li className="nav-item">
+        <button className="logout nav-link" onClick={Clear}>Clear</button>
+          </li>
+      )}
+      
+      
+
     </nav>
   );
 };
